@@ -1,0 +1,46 @@
+﻿HW_1. The first part
+Linux terminal (GitBash) commands
+Matveichuk Mikhail 
+
+
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir folder_name
+3) Зайти в папку - cd folder_name
+4) Создать 3 папки - mkdir git1 git2 git3 
+5) Зайти в любую папку  cd git1
+6) Создать 5 файлов (3 txt, 2 json) - touch new1.txt new2.txt new3.txt js1.json js2.json
+7) Создать 3 папки - mkdir git1.1 git1.2 git1.3
+8. Вывести список содержимого папки - ls - la 
+9) + Открыть любой txt файл - cat >> new1.txt
+10) + написать туда что-нибудь, любой текст. - Hello everyone!
+11) + сохранить и выйти. - нажать CTRL+C
+12) Выйти из папки на уровень выше - cd .. 
+13) переместить любые 2 файла, которые вы создали, в любую другую папку. - mv git1/new1.txt git1/new2.txt git3
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку. - cp git3/new1.txt git3/new2.txt git1
+15) Найти файл по имени - find . -name "new1.txt"
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает. - grep . git1/new1.txt (так же можно через команду “tail -F”)
+17) вывести несколько первых строк из текстового файла - head -n2 git1/new.txt
+18) вывести несколько последних строк из текстового файла - tail -n2 git1/new1.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает. - less long_file.txt
+20) вывести дату и время - date
+
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request - curl -L http://162.55.220.72:5005/terminal-hw-request 
+
+
+curl  http://162.55.220.72:5005/get_method?name=Mikhail\&age=31
+
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13 - в разработке
+
+#!/bin/bash
+
+cd test
+mkdir git1 git2 git3 
+cd git1
+touch new1.txt new2.txt new3.txt js1.json js2.json
+mkdir git1.1 git1.2 git1.3
+ls -la 
+mv new1.txt new2.txt ../git3
